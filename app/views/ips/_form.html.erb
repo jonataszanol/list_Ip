@@ -1,0 +1,62 @@
+<%= form_with(model: ip, local: true) do |form| %>
+  <% if ip.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(ip.errors.count, "error") %> prohibited this ip from being saved:</h2>
+
+      <ul>
+      <% ip.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :ip %>
+    <%= form.text_field :ip %>
+  </div>
+
+  <div class="field">
+    <%= form.label :usuario %>
+    <%= form.text_field :usuario %>
+  </div>
+
+  <div class="field">
+    <%= form.label :setor %>
+    <%= form.text_field :setor %>
+  </div>
+
+  <div class="field">
+    <%= form.collection_select :filial_id, @filiais, :id, :descricao%>
+    <%= form.label :filial_id %>
+  </div>
+
+  <div class="field col s12">
+    <select>
+      <option value="" disabled selected>Choose your option</option>
+      <option value="1">Option 1</option>
+      <option value="2">Option 2</option>
+      <option value="3">Option 3</option>
+    </select>
+    <label>Materialize Select</label>
+  </div>
+
+  <div class="field">
+    <%= form.label :acessos_id %>
+    <%= form.text_field :acessos_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :data_inicio %>
+    <%= form.datetime_select :data_inicio %>
+  </div>
+
+  <div class="field">
+    <%= form.label :data_fim %>
+    <%= form.datetime_select :data_fim %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

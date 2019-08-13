@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ip: MyString
+  usuario: MyString
+  setor: MyString
+  filial: one
+  acessos: one
+  data_inicio: 2019-08-12 19:36:48
+  data_fim: 2019-08-12 19:36:48
+
+two:
+  ip: MyString
+  usuario: MyString
+  setor: MyString
+  filial: two
+  acessos: two
+  data_inicio: 2019-08-12 19:36:48
+  data_fim: 2019-08-12 19:36:48

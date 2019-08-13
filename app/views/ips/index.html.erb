@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Ips</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Ip</th>
+      <th>Usuario</th>
+      <th>Setor</th>
+      <th>Filial</th>
+      <th>Acessos</th>
+      <th>Data inicio</th>
+      <th>Data fim</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ips.each do |ip| %>
+      <tr>
+        <td><%= ip.ip %></td>
+        <td><%= ip.usuario %></td>
+        <td><%= ip.setor %></td>
+        <td><%= ip.filial %></td>
+        <td><%= ip.acessos %></td>
+        <td><%= ip.data_inicio %></td>
+        <td><%= ip.data_fim %></td>
+        <td><%= link_to 'Show', ip %></td>
+        <td><%= link_to 'Edit', edit_ip_path(ip) %></td>
+        <td><%= link_to 'Destroy', ip, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Novo Cadastro', new_ip_path %>

@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Ip:</strong>
+  <%= @ip.ip %>
+</p>
+
+<p>
+  <strong>Usuario:</strong>
+  <%= @ip.usuario %>
+</p>
+
+<p>
+  <strong>Setor:</strong>
+  <%= @ip.setor %>
+</p>
+
+<p>
+  <strong>Filial:</strong>
+  <%= @ip.filial %>
+</p>
+
+<p>
+  <strong>Acessos:</strong>
+  <%= @ip.acessos %>
+</p>
+
+<p>
+  <strong>Data inicio:</strong>
+  <%= @ip.data_inicio %>
+</p>
+
+<p>
+  <strong>Data fim:</strong>
+  <%= @ip.data_fim %>
+</p>
+
+<%= link_to 'Edit', edit_ip_path(@ip) %> |
+<%= link_to 'Back', ips_path %>
